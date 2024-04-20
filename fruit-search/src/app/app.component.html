@@ -1,0 +1,22 @@
+<div class="App">
+  <h1>Fruit Search App</h1>
+  <input
+    style="width: 300px"
+    type="text"
+    placeholder="Search for fruits or vegetables..."
+    [(ngModel)]="searchTerm"
+    (input)="handleChange($event)"
+  />
+  <label>
+    <input
+      type="checkbox"
+      [(ngModel)]="isChecked"
+      (change)="handleCheckboxChange($event)"
+    />
+    show in stock only
+  </label>
+  
+  <app-product *ngIf="fruits.length > 0" [title]="'Fruits'" [content]="fruits"></app-product>
+  <app-product *ngIf="vegetables.length > 0" [title]="'Vegetables'" [content]="vegetables"></app-product>
+
+</div>
