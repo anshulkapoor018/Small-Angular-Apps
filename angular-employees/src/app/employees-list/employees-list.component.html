@@ -1,0 +1,14 @@
+<div class="controls">
+    <input
+      type="text"
+      class="filter-input"
+      [(ngModel)]="searchTerm"
+      (input)="handleSearchTermChange($event)"
+      placeholder="Search employees"
+    />
+</div>
+<ul class="employees-list">
+<li *ngFor="let employee of filteredEmployees" [attr.data-testid]="'employee'">
+    {{ employee.name }}
+</li>
+</ul>
