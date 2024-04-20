@@ -1,0 +1,58 @@
+.PokemonListSearch {
+    padding: 1rem;
+  }
+  
+  .poke-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+  
+  .movie-card {
+    background: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s; /* Animation on hover */
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd; /* Separate image from text */
+  }
+  
+  .movie-info {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    color: white
+  }
+  
+  @media (max-width: 1200px) {
+    .movie-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .movie-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movie-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

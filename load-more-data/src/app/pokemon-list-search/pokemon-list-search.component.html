@@ -1,0 +1,14 @@
+<div class="PokemonListSearch">
+    <div class="poke-grid">
+        <div *ngFor="let pokemon of pokemonList; let idx = index" class="movie-card">
+        <img [src]="getPokemonImage(idx)" class="movie-image" [alt]="pokemon.name" />
+        <div class="movie-info">
+            <h3>{{ pokemon.name }}</h3>
+        </div>
+        </div>
+    </div>
+    <div class="pagination" *ngIf="pokemonList.length">
+        <button (click)="loadMore()">Load More</button>
+    </div>
+</div>
+  
